@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tecksolke.kahawa.CoopSector"
+    tools:showIn="@layout/activity_coop_sector">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="#ffd9d9d9"
+        android:layout_centerHorizontal="true"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="6dp">
+
+    <ViewFlipper
+        android:id="@+id/viewpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/backinformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Background Information"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Grower Code"
+                            android:id="@+id/coop_growercode"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/card_coop_next"
+                        android:layout_height="wrap_content"
+                        card_view:cardBackgroundColor="#ffd9d9d9"
+                        card_view:cardCornerRadius="3dp"
+                        card_view:cardElevation="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/btn_coop_verify"
+                            android:text="VERIFY"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorText"/>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/coop_fetchedDataDisplay"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="DATA FETCHED"-->
+                        <!--android:textSize="80sp"/>-->
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="240dp"
+                    android:paddingBottom="20dp">
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardBackgroundColor="#ffd9d9d9"
+                        card_view:cardCornerRadius="3dp"
+                        card_view:cardElevation="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_gravity="center_horizontal">
+
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/btn_bg_next"
+                            android:text="NEXT"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorText"/>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/productiondata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Production Data"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Coffee(ha)"
+                            android:inputType="number"
+                            android:id="@+id/coop_area"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Coffe Variety1"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mature"
+                            android:id="@+id/coop_mature_1"
+                            android:inputType="number"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Young"
+                            android:id="@+id/coop_young_1"
+                            android:inputType="number"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Coffe Variety2"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mature"
+                            android:id="@+id/coop_mature_2"
+                            android:inputType="number"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Young"
+                            android:inputType="number"
+                            android:id="@+id/coop_young_2"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Coffe Variety3"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mature"
+                            android:inputType="number"
+                            android:id="@+id/coop_mature_3"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Young"
+                            android:inputType="number"
+                            android:id="@+id/coop_young_3"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Coffe Variety4"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mature"
+                            android:inputType="number"
+                            android:id="@+id/coop_mature_4"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Young"
+                            android:inputType="number"
+                            android:id="@+id/coop_young_4"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Coffe Variety5"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mature"
+                            android:inputType="number"
+                            android:id="@+id/coop_mature_5"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Young"
+                            android:inputType="number"
+                            android:id="@+id/coop_young_5"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Quantity(KGS)"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Cherry Intake"
+                            android:inputType="number"
+                            android:id="@+id/coop_cherry_quantity"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mbuni Intake"
+                            android:inputType="number"
+                            android:id="@+id/coop_mbuni_quantity"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Payment Rates"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Cherry Rates"
+                            android:inputType="number"
+                            android:id="@+id/coop_cherry_rates"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mbuni Rates"
+                            android:inputType="number"
+                            android:id="@+id/coop_mbuni_rates"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Quantity of Patchment"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="P1"
+                            android:inputType="number"
+                            android:id="@+id/coop_patchment_p1"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="P2"
+                            android:inputType="number"
+                            android:id="@+id/coop_patchment_p2"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="P3"
+                            android:inputType="number"
+                            android:id="@+id/coop_patchment_p3"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="P4"
+                            android:inputType="number"
+                            android:id="@+id/coop_patchment_p4"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Pl"
+                            android:inputType="number"
+                            android:id="@+id/coop_patchment_pl"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Total Clean Coffee"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Clean Coffee"
+                            android:inputType="number"
+                            android:id="@+id/coop_clean_coffee"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardBackgroundColor="#ffd9d9d9"
+                        card_view:cardCornerRadius="3dp"
+                        card_view:cardElevation="10dp"
+                        android:layout_marginLeft="220dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/btn_pd_next"
+                            android:text="NEXT"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farm Inputs"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Fungicide"
+                            android:inputType="number"
+                            android:id="@+id/coop_Fungicide"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Insecticide"
+                            android:inputType="number"
+                            android:id="@+id/coop_Insecticide"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Herbicide"
+                            android:inputType="number"
+                            android:id="@+id/coop_Herbicide"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Fertilizer"
+                            android:inputType="number"
+                            android:id="@+id/coop_Fertilizer_1"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Fertilizer"
+                            android:inputType="number"
+                            android:id="@+id/coop_Fertilizer_2"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Fertilizer"
+                            android:inputType="number"
+                            android:id="@+id/coop_Fertilizer_3"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Fertilizer"
+                            android:inputType="number"
+                            android:id="@+id/coop_Fertilizer_4"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Nurseries"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Variety Raised [A]"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Quantity Sold"
+                            android:inputType="number"
+                            android:id="@+id/coop_variety_sold_1"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="No.Planted"
+                            android:inputType="number"
+                            android:id="@+id/coop_variety_planted_1"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Variety Raised [B]"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Quantity Sold"
+                            android:inputType="number"
+                            android:id="@+id/coop_variety_sold_2"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:hint="No.Planted"
+                            android:inputType="number"
+                            android:id="@+id/coop_variety_planted_2"
+                            android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardBackgroundColor="#ffd9d9d9"
+                        card_view:cardCornerRadius="3dp"
+                        card_view:cardElevation="10dp"
+                        android:layout_marginRight="113dp"
+                        android:layout_gravity="center_horizontal">
+
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/coop_previous"
+                            android:text="PREVIOUS"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:cardBackgroundColor="#ffd9d9d9"
+                        card_view:cardCornerRadius="3dp"
+                        card_view:cardElevation="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/coop_submit"
+                            android:text="SUBMIT"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorText"
+                            android:onClick="coopDataProcessing"/>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </ViewFlipper>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBarCoop"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

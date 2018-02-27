@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kahawa</string>
+    <string name="title_activity_kahawa">Kahawa</string>
+    <string name="title_coop">Cooperative Sector</string>
+    <string name="title_estate">Estate Sector</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="logout_settings">Logout</string>
+    <string name="password_settings">Change Password</string>
+    <string name="button_login">LOGIN</string>
+    <string name="button_forgot">Forgot Password</string>
+    <string name="powered">powered by tecksolke</string>
+    <string name="title_activity_estate_sector">Estate Sector</string>
+    <string name="title_activity_coop_sector">Co-operative Sector</string>
+    <string name="title_activity_change_password" />
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="Cooperative Sector"
+        android:tooltipText="Co-operative Sector">
+        <menu>
+            <item
+                android:id="@+id/coop_capture_data"
+                android:icon="@drawable/ic_capture"
+                android:title="Capture Data"/>
+            <item
+                android:id="@+id/coop_export_data"
+                android:icon="@drawable/ic_export"
+                android:title="Export Data" />
+        </menu>
+    </item>
+
+    <item
+        android:title="Estate Sector"
+        android:tooltipText="Estate Sector">
+        <menu>
+            <item
+                android:id="@+id/estate_capture_data"
+                android:icon="@drawable/ic_capture"
+                android:title="Capture Data" />
+            <item
+                android:id="@+id/estate_export_data"
+                android:icon="@drawable/ic_export"
+                android:title="Export Data" />
+        </menu>
+    </item>
+
+    <item
+        android:title="Actions"
+        android:tooltipText="Actions">
+        <menu>
+            <item
+                android:id="@+id/passwordChange"
+                android:icon="@drawable/ic_capture"
+                android:title="Change Password" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
